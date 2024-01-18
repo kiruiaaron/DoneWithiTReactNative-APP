@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native';
+import { SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 export default function App() {
 
@@ -9,7 +11,9 @@ export default function App() {
 
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollview}>
+       <View style={styles.container}>
       <View style= {StyleSheet.buttonContainer}>
         <Button onPress={this._onPressButton} title='Press Me'/>
 
@@ -27,6 +31,10 @@ export default function App() {
       </View>
      
     </View>
+      </ScrollView>
+
+    </SafeAreaView>
+    
 
   );
 }
